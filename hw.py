@@ -224,9 +224,8 @@ def show_birthday(args, book: AddressBook):
 def birthdays(book: AddressBook):
     return book.get_upcoming_birthdays()
 
-
 def main():
-    book = AddressBook()
+    book = load_data()
     print("Welcome to the assistant bot!")
     while True:
         user_input = input("Enter a command: ")
@@ -234,16 +233,17 @@ def main():
 
         if command in ["close", "exit"]:
             print("Good bye!")
+            save_data(book)
             break
         elif command == "hello":
             print("How can I help you?")
         elif command == "add":
             print(add_contact(args, book))
         elif command == "change":
-            print(change_contact(args, book))
-        elif command == "phone":
+            print(ch== "phone":
             print(show_phone(args, book))
-        elif command == "all":
+        elif command == "all":ange_contact(args, book))
+        elif command
             print(book)
         elif command == "add-birthday":
             print(add_birthday(args, book))
